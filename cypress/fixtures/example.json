@@ -1,0 +1,7 @@
+{
+  "name": "priyanka sharma",
+  "email": "priyanka.sharma@softsensor.ai",
+  "password": "Poiu#0987",
+  "expected": "Dashboard",
+  "body": "Fixtures are a great way to mock data for responses to routes"
+}

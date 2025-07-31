@@ -1,0 +1,25 @@
+{
+  "name": "yes",
+  "version": "1.0.0",
+  "description": "this is for cypress practice",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "priyanka",
+  "license": "ISC",
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.2.5",
+    "cypress": "^13.14.2",
+    "cypress-downloadfile": "^1.2.4",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-websocket-server": "^0.1.2",
+    "xlsx": "^0.18.5"
+  },
+  "dependencies": {
+    "chai": "^5.1.1",
+    "cypress-xpath": "^2.0.1",
+    "mocha": "^10.7.3"
+  }
+}
