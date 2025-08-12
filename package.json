@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "cypress:open": "cypress open",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cypress:run": "cypress run",
+    "cypress:report": "npx mochawesome-merge cypress/reports/*.json > cypress/reports/output.json && npx marge cypress/reports/output.json --reportDir cypress/reports --inline",
+    "test": "npm run cypress:run && npm run cypress:report"
   },
   "author": "priyanka",
   "license": "ISC",
