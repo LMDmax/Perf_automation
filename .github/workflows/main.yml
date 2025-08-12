@@ -22,6 +22,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Install mochawesome
+        run: npm install --save-dev mochawesome mochawesome-merge mochawesome-report-generator
+
       - name: Run Cypress tests & generate report
         run: npm test
 
