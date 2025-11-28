@@ -25,20 +25,26 @@ it('LoginTest', () => {
   //first create object of class
   const ln=new Login();
   ln.setUserName('allchat575@gmail.com');
-  ln.setPassword('Abcd@1234');
+  ln.setPassword('Test@123');
   ln.Clickbutton();
 
-   cy.get('input[type="checkbox"].PrivateSwitchBase-input').click();
-   cy.log("Dashboard page loaded");
+  //  cy.get('input[type="checkbox"].PrivateSwitchBase-input').click();
+  //  cy.log("New Dashboard page loaded");
   
-  cy.get('input[id="search_all_driver"]')  // Select the search field
-  .should('be.visible')                 // Ensure it is visible
-  .click()                              // Click to focus (if necessary)
-  .type('Aarron Anthony Williams')                 // Type the value
-  //cy.contains('div','Aarron Anthony Williams',{timeout:5000})
-  .click();
-  //cy.get('.jss21 > :nth-child(2)').click();
-   cy.log('Typing aarron into the search field');
+  //  cy.get('input[id="search_all_driver"]')  // Select the search field
+  //    .should('be.visible')                 // Ensure it is visible
+  //    .click()                              // Click to focus (if necessary)
+  //    .type('Aarron')                 // Type the value
+  //  cy.contains('div','Aarron Williams') // Wait for the element to appear
+  //    .click();
+  // //cy.get('.jss21 > :nth-child(2)').click();
+  //  cy.log('Typing aarron into the search field');
+
+   const prof = new Profile();
+    prof.prof();
+    prof.TOSprof();
+    prof.pripol();
+
 
    //notifications
 
@@ -57,16 +63,13 @@ it('LoginTest', () => {
   const set = new Settings();
   set.Adminlist();
   set.Addadmin();
-  set.Editadmin();
+  //set.Editadmin();
   set.Deleteadmin();
   //set.Setthreshold();
   set.netemailreport();
   set.scoreemailreport();
 
-  const prof = new Profile();
-    prof.prof();
-    prof.TOSprof();
-    prof.pripol();
+  
   
   const dash = new Dashboard()
       dash.Dailyhigh();

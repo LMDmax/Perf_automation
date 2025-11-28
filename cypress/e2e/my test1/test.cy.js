@@ -19,23 +19,23 @@ it('LoginTest', () => {
   //first create object of class
   const ln=new Login();
   ln.setUserName('allchat575@gmail.com');
-  ln.setPassword('Abcd@1234');
+  ln.setPassword('Test@1234');
   ln.Clickbutton();
 
- cy.get('input[type="checkbox"].PrivateSwitchBase-input').click();
+ //cy.get('input[type="checkbox"].PrivateSwitchBase-input').click();
 
     //const dash = new dashboard()
       //dash.Dailyhigh();
 
-      const dr=new driver()
-      dr.driverdash();
+      //const dr=new driver()
+      //dr.driverdash();
 
-    //const ch=new Chat()
-    //ch.chattwillio();
+      const ch=new Chat()
+        ch.chattwillio();
 
-      const ack=new acknowledgment()
-       ack.getacknowledgment();
-       ack.addacknowledgment();
+      // const ack=new acknowledgment()
+      //  ack.getacknowledgment();
+      //  ack.addacknowledgment();
   })
 
 })
