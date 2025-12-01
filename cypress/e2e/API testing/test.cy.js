@@ -7,7 +7,6 @@ import driver from "../../Pageobjects/Driver.js";
 import Chat from "../../Pageobjects/Chat.js";
 import acknowledgment from "../../Pageobjects/acknowledgement.js";
 
-import { it } from "mocha";
 describe('Login page', () => {
   before(() => {
     Cypress.config('defaultCommandTimeout', 10000);

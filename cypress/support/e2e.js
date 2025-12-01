@@ -21,4 +21,4 @@ import './commands'
 
 require('cypress-xpath');
 import 'cypress-file-upload';
-require('cypress-downloadfile/lib/downloadFileCommand');
+//require('cypress-downloadfile/lib/downloadFileCommand');

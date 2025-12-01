@@ -29,3 +29,4 @@ import "cypress-mailosaur";
 // <reference types="cypress-xpath" />
 import '@4tw/cypress-drag-drop';
 require('cypress-downloadfile/lib/downloadFileCommand');
+//import 'cypress-downloadfile/lib/downloadFileCommand';

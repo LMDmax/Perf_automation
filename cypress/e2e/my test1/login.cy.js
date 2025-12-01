@@ -1,4 +1,3 @@
-const chai = require('chai');
 import Login from "../../Pageobjects/Loginpage.JS";
 import Notifications from "../../Pageobjects/Notifications.js";
 import dailyrepo from "../../Pageobjects/Daily report.js";
@@ -11,7 +10,6 @@ import acknowledgment from "../../Pageobjects/acknowledgement.js";
 import  Dashboard from "../../Pageobjects/Dashboard.js";
 import Chat from "../../Pageobjects/Chat.js";
 
-import { it } from "mocha";
 describe('Login page', () => {
   before(() => {
     Cypress.config('defaultCommandTimeout', 10000);
@@ -28,8 +26,9 @@ it('LoginTest', () => {
   ln.setPassword('Test@123');
   ln.Clickbutton();
 
-  //  cy.get('input[type="checkbox"].PrivateSwitchBase-input').click();
-  //  cy.log("New Dashboard page loaded");
+  cy.get('input[type="checkbox"].PrivateSwitchBase-input').click();
+  cy.log("New Dashboard page loaded");
+  cy.wait(5000);
   
   //  cy.get('input[id="search_all_driver"]')  // Select the search field
   //    .should('be.visible')                 // Ensure it is visible

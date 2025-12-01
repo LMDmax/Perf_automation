@@ -1,6 +1,7 @@
-const { defineConfig } = require("cypress");
+import { defineConfig } from "cypress";
+import { downloadFile } from "cypress-downloadfile/lib/addPlugin";
 
-module.exports = defineConfig({
+export default defineConfig({
   projectId: 'j7i5bp',
   e2e: {
     baseUrl: 'https://staging.performance.lmdmax.com/',
@@ -13,8 +14,12 @@ module.exports = defineConfig({
       html: false,
       json: true
     },
+    viewportWidth: 1920,
+    viewportHeight: 1080,
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      // register downloadFile as a Cypress task
+      on('task', { downloadFile });
+      return config;
     }
-  },
+  }
 });

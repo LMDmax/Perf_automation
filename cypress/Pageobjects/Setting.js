@@ -122,14 +122,27 @@ class Settings {
     cy.url().should("include", '/settings/email_reporting/netradyne_email');
     //cy.get('.css-se37af').click(); // change selector accordingly
     cy.get('button.css-f4s5gt').click(); //click on calendar
-     cy.contains('button.MuiPickersDay-root','12')
-      .should('be.visible')
-      .dblclick();
-     cy.wait(2000);
-    // select date 
+     // Wait for dates to load
+// Select end date
+    cy.get('button.MuiPickersDay-root:not([disabled])')
+    .contains(/^12$/)
+    .click({ force: true });
+    //Select end date
+    cy.get('button.MuiPickersDay-root:not([disabled])')
+    .contains(/^12$/)
+    .click({ force: true });
     cy.get('button.css-8sdzdk').click();      //click on send email button
+    // ---- Click Send in Popup ----
+   // Click the Send button in the modal
+    cy.get('button.css-8sdzdk')
+    .last()
+    .click({ force: true });
+    //cy.wait(2000);
+    // Verify success message appears
+    cy.contains('Email sent to all recipients')
+    .should('be.visible');
+   
     cy.log('Email sent to all admins and owners');
-    cy.get('.css-1cvhzgg').should('have.text', 'Email sent to all admins and owners');
   }
 
   scoreemailreport() {

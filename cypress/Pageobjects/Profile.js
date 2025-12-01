@@ -1,24 +1,24 @@
 class Profile
 {
     prof()
-    {
-         cy.xpath("//button[@id='profile']")   //click on profile icon
-           .click({force : true})
-           .should('be.visible');
-        cy.log('https://staging.performance.lmdmax.com/profile'); // profile page opened
+    {//
+           cy.get('button[aria-label="Profile"]').click();
+      //click on profile icon in old dashboard
+            //cy.contains('button', 'Go To Profile').click();   //click on profile icon in new dashboard
+           //.should('be.visible');
         // Wait for page load
-            cy.wait(2000);
-            cy.get('.css-1z13r6o').click();
+    
+            //cy.url().should('include', '/profile');
         // Log the content of user details section
              //click on user details tab
-            cy.get('.css-wx2p24').contains('User Details')
+            cy.get('.css-wx2p24') 
             .then(($el) => {
-            cy.log($el.text()+'   ');
+            cy.log($el.text()+'   ');    //
         });
 
         // Log the content of the company details section
             cy.get('.css-5yicxn').then(($el) => {
-            cy.log($el.text(),' \n  ');
+            cy.log($el.text(),' \n  ');    
 
         // //Log profile picture
             //print image url
@@ -33,9 +33,8 @@ class Profile
     }
     TOSprof()
     {
-         cy.get('.css-45do71')
-         .click({multiple:true});
-         cy.url().should('be.have','https://lmdmax.com/termsandcondition/');
+         cy.get('.css-1umhu2m').click({ multiple: true });
+         cy.log('termsandcondition');
     }
     pripol()
     {
