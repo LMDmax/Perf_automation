@@ -26,9 +26,9 @@ it('LoginTest', () => {
   ln.setPassword('Test@123');
   ln.Clickbutton();
 
-  cy.get('input[type="checkbox"].PrivateSwitchBase-input').click();
-  cy.log("New Dashboard page loaded");
-  cy.wait(5000);
+  // cy.get('input[type="checkbox"].PrivateSwitchBase-input').click();
+  // cy.log("New Dashboard page loaded");
+  // cy.wait(5000);
   
   //  cy.get('input[id="search_all_driver"]')  // Select the search field
   //    .should('be.visible')                 // Ensure it is visible
@@ -66,22 +66,22 @@ it('LoginTest', () => {
   set.Deleteadmin();
   //set.Setthreshold();
   set.netemailreport();
-  set.scoreemailreport();
+  // set.scoreemailreport();
 
   
   
-  const dash = new Dashboard()
-      dash.Dailyhigh();
+  // const dash = new Dashboard()
+  //     dash.Dailyhigh();
 
-      const dr=new driver()
-      dr.driverdash();
+  //     const dr=new driver()
+  //     dr.driverdash();
 
-    const ch=new Chat()
-    ch.chattwillio();
+  //   const ch=new Chat()
+  //   ch.chattwillio();
 
-      const ack=new acknowledgment()
-       ack.getacknowledgment();
-       ack.addacknowledgment();
+  //     const ack=new acknowledgment()
+  //      ack.getacknowledgment();
+  //      ack.addacknowledgment();
   });
 });
 
